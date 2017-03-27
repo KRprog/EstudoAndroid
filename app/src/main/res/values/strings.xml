@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lanchonete</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_mostra">Mostra Pedido</string>
+    <string name="palavra_gera">Gera</string>
+    <string name="palavra_grava">Grava</string>
+    <string name="grid_pedidos">Consulta de Pedidos</string>
+
+</resources>
