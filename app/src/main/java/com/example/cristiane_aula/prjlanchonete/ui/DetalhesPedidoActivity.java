@@ -1,4 +1,4 @@
-package com.example.cristiane_aula.prjlanchonete;
+package com.example.cristiane_aula.prjlanchonete.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cristiane_aula.prjlanchonete.db.DBAdapter;
+import com.example.cristiane_aula.prjlanchonete.R;
+import com.example.cristiane_aula.prjlanchonete.models.Lanchonete;
 
-public class Mostra extends AppCompatActivity {
+
+public class DetalhesPedidoActivity extends AppCompatActivity {
     private DBAdapter datasource;
     private Lanchonete pedido;
 

@@ -1,4 +1,4 @@
-  package com.example.cristiane_aula.prjlanchonete;
+  package com.example.cristiane_aula.prjlanchonete.models;
 
 /**
  * Created by Cristiane-Aula on 20/02/2017.

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cristiane_aula.prjlanchonete">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Mostra" />
-        <activity android:name=".Grid" />
+        <activity android:name=".ui.DetalhesPedidoActivity" />
+        <activity android:name=".ui.ListarPedidoActivity" />
+        <activity android:name=".ui.PedidoActivity" />
     </application>
 
 </manifest>

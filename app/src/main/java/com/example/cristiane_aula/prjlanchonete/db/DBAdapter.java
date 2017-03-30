@@ -1,10 +1,12 @@
-package com.example.cristiane_aula.prjlanchonete;
+package com.example.cristiane_aula.prjlanchonete.db;
 
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.cristiane_aula.prjlanchonete.models.Lanchonete;
 
 
 public class DBAdapter {
@@ -36,7 +38,7 @@ public class DBAdapter {
 	}
 	
 	
-	public long createLanche(Lanchonete lanche ) { 
+	public long createLanche(Lanchonete lanche ) {
         
 		long id_dados = -1;
         database.beginTransaction();

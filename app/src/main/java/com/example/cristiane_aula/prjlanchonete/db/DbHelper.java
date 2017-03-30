@@ -1,4 +1,4 @@
-package com.example.cristiane_aula.prjlanchonete;
+package com.example.cristiane_aula.prjlanchonete.db;
 
 
 import android.content.Context;

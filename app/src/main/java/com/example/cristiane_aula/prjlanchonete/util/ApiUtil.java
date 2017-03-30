@@ -1,8 +1,6 @@
 package com.example.cristiane_aula.prjlanchonete.util;
 
 import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -15,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.example.cristiane_aula.prjlanchonete.conf.Constant;
-import com.example.cristiane_aula.prjlanchonete.model.Credentials;
+import com.example.cristiane_aula.prjlanchonete.models.Credentials;
 import com.example.cristiane_aula.prjlanchonete.net.WebRequest;
 
 /**

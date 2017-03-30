@@ -1,10 +1,10 @@
 package com.example.cristiane_aula.prjlanchonete.ui;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,15 +14,13 @@ import com.android.volley.VolleyError;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.example.cristiane_aula.prjlanchonete.MainActivity;
 import com.example.cristiane_aula.prjlanchonete.R;
-import com.example.cristiane_aula.prjlanchonete.model.Credentials;
-import com.example.cristiane_aula.prjlanchonete.util.ApiUtil;
+import com.example.cristiane_aula.prjlanchonete.models.Credentials;
 import com.example.cristiane_aula.prjlanchonete.util.Func;
 import com.example.cristiane_aula.prjlanchonete.util.AccountUtil;
 import com.example.cristiane_aula.prjlanchonete.util.PreferencesUtil;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,14 +57,14 @@ public class LoginActivity extends Activity {
                     try {
                         if(response.getBoolean("success") && response.has("token")){
                             PreferencesUtil.getInstance(mCtx.getApplicationContext()).setToken(response.getString("token"));
-                            Toast.makeText(mCtx,"Usuário logado com sucesso!",Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(mCtx, MainActivity.class);
-                            startActivity(intent);
+                            Toast.makeText(mCtx.getApplicationContext(),"Login realizado com sucesso!",Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(mCtx.getApplicationContext(), PedidoActivity.class));
                             finish();
                         }else{
                             Toast.makeText(mCtx.getApplicationContext(),response.getString("message"),Toast.LENGTH_LONG).show();
                         }
                     } catch (JSONException e) {
+                        Toast.makeText(mCtx.getApplicationContext(),"Ocorreu um erro ao tentar logar!",Toast.LENGTH_LONG).show();
                         e.printStackTrace();
                     }
                     return null;

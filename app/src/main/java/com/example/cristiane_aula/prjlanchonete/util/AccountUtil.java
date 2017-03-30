@@ -11,7 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.cristiane_aula.prjlanchonete.conf.Constant;
-import com.example.cristiane_aula.prjlanchonete.model.Credentials;
+import com.example.cristiane_aula.prjlanchonete.models.Credentials;
 import com.example.cristiane_aula.prjlanchonete.net.WebRequest;
 
 /**

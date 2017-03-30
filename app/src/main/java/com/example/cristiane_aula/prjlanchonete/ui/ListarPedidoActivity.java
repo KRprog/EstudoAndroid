@@ -1,4 +1,4 @@
-package com.example.cristiane_aula.prjlanchonete;
+package com.example.cristiane_aula.prjlanchonete.ui;
 
 import android.database.Cursor;
 import android.support.v7.app.AlertDialog;
@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
+import com.example.cristiane_aula.prjlanchonete.db.DBAdapter;
+import com.example.cristiane_aula.prjlanchonete.R;
+
 import java.util.ArrayList;
 
-public class Grid extends AppCompatActivity {
+public class ListarPedidoActivity extends AppCompatActivity {
     GridView grid1;
     private DBAdapter datasource;
     Cursor cursor;
@@ -54,14 +57,14 @@ public class Grid extends AppCompatActivity {
 
             datasource.fecharConexao();
         }catch (Exception e) {
-            mostraCXTexto("Grid View DB. Mensagem: " +e.getMessage(), " Erro");
+            mostraCXTexto("ListarPedidoActivity View DB. Mensagem: " +e.getMessage(), " Erro");
 
         }
     }
 
 
     private void mostraCXTexto(String msg, String titulo) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Grid.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ListarPedidoActivity.this);
         builder.setMessage(msg);
         builder.setNegativeButton("OK", null);
           AlertDialog dialog = builder.create();
